@@ -1,0 +1,17 @@
+name: Push Ok
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  say_ok:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Decir ok en console
+      run: |
+        echo 'ok'
